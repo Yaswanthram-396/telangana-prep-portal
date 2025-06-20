@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
   origin: 'http://localhost:8080',
+  withCredentials: true,
 }));
 app.use(express.json());
 app.use("/api", loginRouts);
